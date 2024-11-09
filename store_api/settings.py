@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+3m@uqi1ela+zi5!zc(qa2a$5-g)q%m=4fp4j)v^%xt@b0d%+g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['orlysupershop.pythonanywhere.com',  '127.0.0.1', 'localhost']
 

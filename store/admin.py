@@ -1,9 +1,10 @@
-from django.contrib import admin
-from .models import Anuncio, Producto, Categoria, Servicio
+from django.contrib import admin # type: ignore
+from .models import Anuncio, Producto, Categoria, Servicio, Moneda
 
 admin.site.register(Anuncio)
 admin.site.register(Categoria)
 admin.site.register(Servicio)
+admin.site.register(Moneda)
 
 @admin.register(Producto)
 class ProductoAdmin(admin.ModelAdmin):

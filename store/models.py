@@ -1,6 +1,12 @@
-from django.core.exceptions import ValidationError
-from django.db import models
+from django.core.exceptions import ValidationError # type: ignore
+from django.db import models # type: ignore
 
+class Moneda(models.Model):
+    nombre = models.CharField(max_length=50)  # e.g., "USD", "EUR", "MXN"
+    tasa_cambio = models.DecimalField(max_digits=10, decimal_places=4)  # Exchange rate relative to CUP
+
+    def __str__(self):
+        return f"{self.nombre} - Tasa: {self.tasa_cambio}"
 
 class Anuncio(models.Model):
     imagen = models.ImageField(upload_to='anuncios/')
