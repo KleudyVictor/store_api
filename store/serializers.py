@@ -22,9 +22,7 @@ class MonedaSerializer(serializers.ModelSerializer):
         fields = ['id', 'nombre', 'tasa_cambio']
 
 class ProductoSerializer(serializers.ModelSerializer):
-    categorias_negocio = serializers.PrimaryKeyRelatedField(
-        many=True, queryset=Categoria.objects.all()
-    )
+    categorias_negocio = CategoriaSerializer(many=True)  # Maneja categorías anidadas.
     precio_final = serializers.SerializerMethodField()
     precios_convertidos = serializers.SerializerMethodField()  # Field for converted prices
 
