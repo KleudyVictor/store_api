@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+3m@uqi1ela+zi5!zc(qa2a$5-g)q%m=4fp4j)v^%xt@b0d%+g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['orlysupershop.pythonanywhere.com',  '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['expresswayshop.pythonanywhere.com',  '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -56,7 +56,7 @@ MIDDLEWARE = [
 CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
-    # 'https://royalbussiness.netlify.app',
+    'https://expresswayshop.netlify.app',
     'http://localhost:8080',  # Quasar dev server
     'http://127.0.0.1:8080',  # Otra posible URL de desarrollo
 ]
